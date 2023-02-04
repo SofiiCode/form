@@ -5,21 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+   
 </head>
 
 <body>
     <main>
-        <form id="form">
-            <input type="text" name="name" id="name" class="req" >
-            <input type="text" name="user" id="user" class="req" >
-            <button type="submit" value="submit">Submit</button>
+           <form id="form">
+            <div>
+                <span>{</span> <br>
+                <span>name:</span>
+                <input type="text" name="name" id="name" class="req"  >
+                <span>,</span>
+             </div>
+            
+               <div> 
+                <span>user:</span>
+                <input type="text" name="user" id="user" class="req" >
+                <br>
+                <span>}</span>
+            </div>
+            <button type="submit" >Send</button>
         </form>
         <div class="results"></div>
-        <div id="editorjs"></div>
+        
     </main>
-    <script src="/script.js">
-    </script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/codex.editor.header@2.0.4/dist/bundle.js"></script>
+   
+      <script src="/script.js"></script>
 </body>
 </html>

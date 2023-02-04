@@ -1,9 +1,4 @@
 
-// var editor = new EditorJS(); /** Zero-configuration */
-
-// // equals
-
-// var editor = new EditorJS("editorjs");
 
 const form = document.getElementById("form");
 
@@ -26,16 +21,16 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const data = formToJSON(form.elements);
-  // Demo only: print the form data onscreen as a formatted JSON object.
-  const dataContainer = document.getElementsByClassName("results")[0];
+
+  // variable dataObject contains the data from form 
   const dataObject = JSON.stringify(data, null, "  ");
-  let response = fetch("https://stellular-dasik-2e4999.netlify.app/", {
-    method: "POST",
-    body: dataObject,
-  });
+
+  // const fs = require("fs");
+  // fs.writeFileSync("data.json", dataObject);
+
   form.reset();
-  // alert('Your data in the test.json')
-  console.log(dataObject);
-  // Use `JSON.stringify()` to make the output valid, human-readable JSON.
+ 
+
+  const dataContainer = document.getElementsByClassName("results")[0];
   dataContainer.textContent = JSON.stringify(data, null, "  ");
 });
