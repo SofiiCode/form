@@ -1,9 +1,9 @@
 
-var editor = new EditorJS(); /** Zero-configuration */
+// var editor = new EditorJS(); /** Zero-configuration */
 
-// equals
+// // equals
 
-var editor = new EditorJS("editorjs");
+// var editor = new EditorJS("editorjs");
 
 const form = document.getElementById("form");
 
@@ -29,7 +29,7 @@ form.addEventListener("submit", (e) => {
   // Demo only: print the form data onscreen as a formatted JSON object.
   const dataContainer = document.getElementsByClassName("results")[0];
   const dataObject = JSON.stringify(data, null, "  ");
-  let response = fetch("/test.json", {
+  let response = fetch("https://stellular-dasik-2e4999.netlify.app/", {
     method: "POST",
     body: dataObject,
   });
