@@ -8,7 +8,25 @@ const editor = new EditorJS({
   tools: {
     header: {
       class: Header,
-      shortcut: "CMD+SHIFT+H",
+      config: {
+        levels: [2, 3, 4],
+        defaultLevel: 3,
+      },
+    },
+    paragraph: {
+      class: Paragraph,
+      inlineToolbar: true,
+    },
+  },
+  onChange: (api, event) => {
+    console.log("Now I know that Editor's content changed!", event);
+  },
+  sanitizer: {
+    // Allowed tags
+    allowedTags: ["p", "strong", "ul", "li", "ol", "a", "b", "br", "hr"],
+    // Allowed attributes
+    allowedAttributes: {
+      a: ["href", "target"],
     },
   },
 });
@@ -22,40 +40,24 @@ editor.isReady
   });
 
 
+ 
 
 
 const saveButton = document.getElementById("save-button");
-
     saveButton.addEventListener("click", () => {
-      editor.save().then((savedData) => {
+    editor
+      .save()
+      .then((savedData) => {
         let savedDataJson = JSON.stringify(savedData, null, 4);
         console.log(savedDataJson);
-      }).catch((error) => {
-     console.log("Saving failed: ", error);
-   });
+      })
+      .catch((error) => {
+        console.log("Saving failed: ", error);
+      });
     });
 
 
 
-// document.querySelector("form").addEventListener("submit", (event) => {
-//   let formData = new FormData(event.target);
-
-//   editor.data.blocks.push({
-//     name: formData.get("name"),
-//     user: formData.get("user"),
-//   });
-
-//   editor
-//     .save()
-//     .then((savedData) => {
-//       let savedDataJson = JSON.stringify(savedData, null, 4);
-//       console.log(savedDataJson);
-//     })
-//     .catch((error) => {
-//       console.log("Saving failed: ", error);
-//     });
-//   // editor.render();
-// });
 
 
 
