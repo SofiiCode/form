@@ -5,12 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   
+   <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@2.26.5/dist/editor.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/codex.editor.header@2.0.4/dist/bundle.js"></script>
+   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <main>
-           <form id="form">
+        
+        <div id="editorjs" >
+            <form id="form" >
+             <div >
+                <span>Name:</span> 
+                <input type="text" name="name" />
+            </div>
+                <span>User:</span> 
+            <input type="text" name="user" />
+           
+            </form>
+        </div>
+        <button id="save-button">Save</button>
+        
+
+        
+        
+        <!-- <form>
+                Name: <input type="text" name="name" />
+                User: <input type="text" name="user" />
+                <input type="submit" value="Submit" />
+            </form> -->
+           <!-- <form id="form">
             <div>
                 <span>{</span> <br>
                 <span>name:</span>
@@ -26,7 +50,7 @@
             </div>
             <button type="submit" >Send</button>
         </form>
-        <div class="results"></div>
+        <div class="results"></div> -->
         
     </main>
    
