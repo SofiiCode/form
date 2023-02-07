@@ -4,34 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <title>Document</title>
 </head>
 
 <body>
-    <main>
+    <main class="container">
+        <div class="row">
+            <div class="col">
+                 <form id="form">
+            <div>
+                
+                <span>name:</span>
+                <input type="text" name="name" id="name" class="req form-control"  >
+              
+             </div>
+            
+               <div> 
+                <span>user:</span>
+                <input type="text" name="user" id="user" class="req form-control" >
+               
+            </div>
+            <button type="submit" class="btn btn-primary mt-2" >Add card</button>
+        </form>
+            </div>
+            <div class="col">
+                <div id="user-card" data-user="Sofiicode" class="github-card card user-card p-3 mb-3  "></div>
+                <div class=" card  repo-wrapper">
+                      <h3 class="p-3">GitHub repositories</h3>
+                <div id="repo-container" class="pb-1 ms-md-2 me-md-2 d-flex justify-content-center flex-wrap">
+                  <div  data-user="Sofiicode" data-repo="responsive-project" class="d-none "></div>
+                 
+                </div>
+            </div>
+            </div>
+        </div>
         
         <!-- <div id="editorjs" >
             <button id="save-button">Save</button>
         </div> -->
 
-           <form id="form">
-            <div>
-                <span>{</span> <br>
-                <span>name:</span>
-                <input type="text" name="name" id="name" class="req"  >
-                <span>,</span>
-             </div>
-            
-               <div> 
-                <span>user:</span>
-                <input type="text" name="user" id="user" class="req" >
-                <br>
-                <span>}</span>
-            </div>
-            <button type="submit" >Send</button>
-        </form>
-        <div class="results"></div>
+          
         
     </main>
    

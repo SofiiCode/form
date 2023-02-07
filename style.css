@@ -1,0 +1,125 @@
+body{
+  background: #EFF2F6;
+}
+ol{
+    padding-left: 10px;
+}
+
+
+
+.card-header{
+height: 67px;
+}
+ .wrap {
+  position: relative;
+  overflow-x: auto;
+  width: 100%;
+  max-width: 100%; 
+}
+
+
+.github-card{
+  max-width: 450px;
+  width: 100%; 
+}
+.github-card a{
+text-decoration: none;
+}
+
+
+.repo-card{
+  flex-direction: column;
+  border: none;
+  background-color: #EFF2F6;
+  border-radius: 4px;
+  overflow-x: hidden;
+}
+
+
+.name-link,.repo-name-link{
+  color: black;
+}
+.name-link:hover,.repo-name-link:hover{
+  color: black;
+  text-decoration: underline;
+  transition: all ease-in-out 2s;
+}
+.sub-name-link{
+  color: #707070;
+  font-size: 16px
+}
+.sub-name-link:hover{
+  color: #4183c4; 
+}
+.status a{
+color: #707070;
+}
+.status a:hover{
+color: #4183c4;
+}
+.git-description a{
+  color: #4183c4;
+}
+.git-description a:hover{
+  text-decoration: underline;
+}
+
+.footer a:hover{
+  color: #707070;
+text-decoration: underline;
+}
+.git-description,.footer{
+  color: #707070;
+  font-size: 12px;
+ 
+}
+
+.btn-follow{
+  height: 40px;
+}
+
+.green{
+  color:rgb(22, 101, 52);
+  background-color: #dcfce7;
+  padding: 8px;
+  border-radius: 5px;
+}
+.red{
+  color:#651616;
+  background-color: #fcdcdc;
+  padding: 8px;
+  border-radius: 5px;
+}
+.grey{
+  color: #414141;
+  background-color: #a0a0a0;
+  padding: 8px;
+  border-radius: 5px;
+}
+@media (max-width: 479px) {
+ 
+ .margin-top {
+    margin-top: 98px;
+  }
+  .btn-follow{
+    margin: 0 auto;
+  }
+  .user-name{
+    margin: 0 auto;
+  }
+  .user-card-header{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .repo-header{
+  flex-wrap: wrap;
+ 
+}
+}
+
+@media (min-width: 379px) {
+  .margin-top {
+    margin-top: 98px;
+  } 
+}
