@@ -23,13 +23,11 @@ form.addEventListener("submit", (e) => {
   // variable dataObject contains the data from form
   const dataObject = JSON.stringify(data, null, "  ");
 
-  // const fs = require("fs");
-  // fs.writeFileSync("data.json", dataObject);
 
   form.reset();
 
   const dataContainer = document.getElementsByClassName("results")[0];
-  dataContainer.textContent = JSON.stringify(data, null, "  ");
+  dataContainer.textContent = dataObject;
 });
 
 // const editor = new EditorJS({
