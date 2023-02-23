@@ -2,8 +2,8 @@ const form = document.getElementById("form");
 const results = document.getElementById("results");
   hljs.initHighlightingOnLoad();
 
-const requestURL = "profile.json";
-
+const jsonURL = "profile.json";
+// const url = "link to server"
   // function sendRequest(method, url, body = null) {
   //   const headers = {
   //     "Content-Type": "application/json",
@@ -19,7 +19,7 @@ const requestURL = "profile.json";
   //     }
 
   //     return response.json().then((error) => {
-  //       const e = new Error("Что-то пошло не так");
+  //       const e = new Error("Somethink went wrong");
   //       e.data = error;
   //       throw e;
   //     });
@@ -74,8 +74,12 @@ function saveData() {
   
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      saveData()
-      getData(requestURL);
+      saveData();
+      //  const name = document.getElementById("name").value;
+      //  const user = document.getElementById("user").value;
+      //  const body = { name : `"${name}"`, user:`"${user}"` };
+      // sendRequest(POST, url, body);
+      getData(jsonURL);
       form.reset();
     });
 
